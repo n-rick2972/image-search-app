@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: #333;
+  font-family: "Montserrat", "Zen Kaku Gothic New", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: 50px auto 80px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+#search-input {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #333;
+  font-size: 16px;
+}
+
+#search-input:focus {
+  border: none;
+  outline: 1px solid #ff9d47;
+  box-shadow: 0 0 6px 0 #ffb677 inset;
+}
+
+#search-button {
+  padding: 10px 30px;
+  background-color: #ff9d47;
+  border: none;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+}
+
+#search-button:hover {
+  background-color: #ea8d3c;
+  box-shadow: none;
+}
+
+.search-results {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 80%;
+  margin: 0 auto 50px;
+}
+
+.search-result {
+  width: 30%;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.search-result img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.search-result:hover img {
+  transform: scale(1.05);
+}
+
+.search-result a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-result:hover a {
+  background-color: #ffd2ab;
+}
+
+#show-more-button {
+  display: none;
+  width: 150px;
+  margin: 0 auto 160px;
+  padding: 15px 20px;
+  background-color: #25b8ff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3 ease-in-out;
+}
+
+#show-more-button:hover {
+  background-color: #0099e6;
+}
+
+@media (max-width: 768px) {
+  .search-results {
+    justify-content: center;
+  }
+  .search-result {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    flex-direction: column;
+  }
+
+  .search-result {
+    width: 100%;
+  }
+}
